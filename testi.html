@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testimoni</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      height: 100vh;
+      cursor: grab;
+      touch-action: pan-y;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .image {
+      flex: 0 0 auto;
+      margin-right: 10px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      const images = document.querySelectorAll('.image');
+      let isDragging = false;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let animationId = 0;
+
+      function handlePointerDown(e) {
+        if (e.pointerType === 'touch') {
+          container.style.cursor = 'grabbing';
+          container.setPointerCapture(e.pointerId);
+        }
+        isDragging = true;
+        startX = e.clientX || e.touches[0].clientX;
+        cancelAnimationFrame(animationId);
+      }
+
+      function handlePointerMove(e) {
+        if (!isDragging) return;
+        const x = e.clientX || e.touches[0].clientX;
+        const walk = x - startX;
+        currentTranslate = prevTranslate + walk;
+        container.style.transform = `translateX(${currentTranslate}px)`;
+      }
+
+      function handlePointerUp(e) {
+        if (e.pointerType === 'touch') {
+          container.style.cursor = 'grab';
+          container.releasePointerCapture(e.pointerId);
+        }
+        isDragging = false;
+        prevTranslate = currentTranslate;
+        requestAnimationFrame(animateImages);
+      }
+
+      function animateImages() {
+        animationId = requestAnimationFrame(animateImages);
+        const containerWidth = container.offsetWidth;
+        const imagesWidth = Array.from(images).reduce((acc, image) => {
+          return acc + image.offsetWidth + 10; // Consider the margin-right
+        }, 0);
+        if (imagesWidth <= containerWidth) {
+          cancelAnimationFrame(animationId);
+          return;
+        }
+        currentTranslate -= 1;
+        container.style.transform = `translateX(${currentTranslate}px)`;
+        if (Math.abs(currentTranslate) >= imagesWidth) {
+          currentTranslate = 0;
+          prevTranslate = 0;
+          container.style.transform = 'translateX(0)';
+        }
+      }
+
+      container.addEventListener('pointerdown', handlePointerDown);
+      container.addEventListener('pointermove', handlePointerMove);
+      container.addEventListener('pointerup', handlePointerUp);
+      container.addEventListener('pointercancel', handlePointerUp);
+      container.addEventListener('pointerleave', handlePointerUp);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="elemen/Testimoni 1.jpg" alt="Image 1" class="image" draggable="false">
+    <img src="elemen/Testi 2.jpg" alt="Image 2" class="image" draggable="false">
+
+    <!-- Add more images here -->
+  </div>
+  
+</body>
+</html>

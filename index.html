@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Larkxz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('elemen/Poppins-Bold.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(rgb(163, 163, 163), rgb(141, 129, 138));
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    h1 {
+      text-align: center;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.329);
+      cursor: default;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center;
+      background-color: rgb(255, 255, 255);
+      color: rgb(59, 59, 59);
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: rgb(117, 124, 124);
+      color: white;
+      text-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
+    }
+
+    .btnloser {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center;
+      background-color: rgb(14, 199, 255);
+      color: rgb(30, 20, 32);
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btnloser:hover {
+      background-color: rgb(111, 0, 255);
+      color: rgb(255, 255, 255);
+      text-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
+    }
+
+.footer{
+    text-align: center;
+    margin-top: 50px;
+}
+  </style>
+</head>
+<body>
+  <img src="elemen/larkxz.jpg" alt="Profil" class="profile-image" draggable="false">
+  <h1>@Larkxz</h1>
+  <div class="project">
+    <a href="https://discord.com/invite/VGzxqtBx7Q" class="btn" target="_blank">Kizen Store</a>
+    <br>
+    <a href="https://discord.com/invite/49chhyrxDq" class="btn" target="_blank">Balistic Store</a>
+    <br>
+    <a href="notyet.html" class="btn">Testimoni</a>
+    <br>
+    <a href="https://www.shutterstock.com/id/g/Larkxz" class="btn" target="_blank">More About My Design</a>
+    <br><br>
+    <a href="https://discord.gg/4dnargdz5G" class="btnloser" target="_blank">Contact me / order </a>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+    
+        function disableRightClick() {
+          return false;
+        }
+      </script>
+      <footer class="footer">Made By Larkxz</footer>
+      <style>::-webkit-scrollbar {display: none;}</style></body>
+</body>
+</html>

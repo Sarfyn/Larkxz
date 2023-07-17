@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('elemen/Poppins-Bold.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('elemen/Background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .box {
+      width: 200px;
+      height: 400px;
+      background-color: #ebebeb;
+      margin-right: 50px;
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.288);
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      background-color: #d6d3d3;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.288);
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      cursor: default;
+      color: rgb(30, 4, 36);
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover .title {
+      transform: translateY(-5px);
+    }
+
+    .paragraph {
+      font-size: 16px;
+      line-height: 1.5;
+      cursor: default;
+      transition: transform 0.3s ease, color 0.3 ease;
+    }
+
+    .box:hover .paragraph {
+        color: rgb(36, 36, 36);
+      transform: translateY(-5px);
+    }
+
+    h1{
+        text-align: center;
+        margin-top: 50px;
+    }
+    p{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    footer{
+        text-align: center;
+        margin-top: 20px;
+    }
+    button{
+        width: 30px;
+        height: 15px;
+        text-align: center;
+        background-color: rgb(90, 90, 90);
+        color: white;
+    }
+
+    button:hover{
+        width: 30px;
+        height: 15px;
+        text-align: center;
+        background-color: rgb(231, 231, 231);
+        color: rgb(54, 54, 54);
+    }
+    .button {
+      position: absolute;
+      bottom: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0099ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .box:hover .button {
+      background-color: #0066cc;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .box {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        flex-wrap: wrap;
+      }
+
+      .box {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+      }
+    }
+
+    ::selection {
+    background-color: #64646463; /* Warna latar belakang saat teks dipilih */
+    color: #333; /* Warna teks saat teks dipilih */
+  }
+  
+  ::-moz-selection {
+    background-color: #6464645b; /* Warna latar belakang saat teks dipilih di Firefox */
+    color: #333; /* Warna teks saat teks dipilih di Firefox */
+  }
+  </style>
+</head>
+<body style="background-image:url('https://media.istockphoto.com/id/629531868/photo/abstract-white-soft-background.jpg?b=1&s=170667a&w=0&k=20&c=EtdFDso3Z-Piled4i78ulwIOikLhWfZMcY5nMa2k0C4=');">
+    <div>
+    <h1>Design Larkxz</h1>
+    <p>Price List Design</p>
+    </div>
+  <div class="container">
+    <div class="box">
+      <div class="title">Normal Price</div>
+      <div class="paragraph">
+        - Free 2 Revisi<br>
+        - HD/4k Resolution<br>
+        - Format File JPG Only<br>
+        - Abstract/Geometric<br>
+        - Text/Shape Logo<br><br>
+        Rp15.000 / 1$<br>
+      </div>
+    </div>
+    <div class="box">
+      <div class="title">Standard Price</div>
+      <div class="paragraph">
+        - Free 5 Revisi<br>
+        - HD/4k Resolution<br>
+        - Format File JPG/Png<br>
+        - Abstract/Geometric<br>
+        - 3k For Mockup<br>
+        - Text/Shape Logo<br><br>
+        Rp20.000 / 1.33$
+      </div>
+    </div>
+    <div class="box">
+      <div class="title">Profesional Price</div>
+      <div class="paragraph">
+        - Unlimited Revisi<br>
+        - 4k Resolution<br>
+        - Format jpg, png, psd<br>
+        - Abstract, Geometric<br>
+        - Free 3 Mockup<br>
+        - Text, Shape Logo<br><br>
+        Rp35.000 / 2$
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <footer>Made By Larkxz</footer>
+  <style>::-webkit-scrollbar {display: none;}</style>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+@font-face {
+    font-family: Poppins;
+    src: url(elemen/Poppins-Bold.ttf);
+}
+
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.elementor{
+    filter: brightness(3);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-30px);
+  transition: transform 0.3s ease;
+}
+
+.profile h1 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.profile p {
+  color: #888;
+  font-size: 16px;
+}
+
+.profile-image:hover {
+  transform: translateY(-25px) scale(1.1);
+}
+
+.biodata h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #5c5c5c;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info {
+  width: 200px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.info span {
+  font-weight: bold;
+  color: #555;
+}
+
+.info p {
+  color: #333;
+  margin-top: 5px;
+}
+
+.info:hover {
+  transform: translateY(-5px);
+}
+
+.infokukukuntul {
+  width: 200px;
+  margin: 10px;
+  padding: 15px;
+  font-size: 11px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in-out {
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+}
+
+::selection {
+    shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    background-color: #ffffff00; /* Warna latar belakang saat teks dipilih */
+    color: #333; /* Warna teks saat teks dipilih */
+  }
+
+footer{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+  </style>
+</head>
+<body style="background-color: #33333328;" style="background-image:url('https://media.istockphoto.com/id/629531868/photo/abstract-white-soft-background.jpg?b=1&s=170667a&w=0&k=20&c=EtdFDso3Z-Piled4i78ulwIOikLhWfZMcY5nMa2k0C4=');">
+    <div class="container" style="background-image:url('https://media.istockphoto.com/id/629531868/photo/abstract-white-soft-background.jpg?b=1&s=170667a&w=0&k=20&c=EtdFDso3Z-Piled4i78ulwIOikLhWfZMcY5nMa2k0C4=');">
+        <div class="profile" style="cursor: default;">
+          <h1>Larkxz</h1>
+          <p>Designer</p>
+        </div>
+        <div class="biodata">
+          <h2>Biodata</h2>
+          <div class="details">
+            <div class="info" onclick="changeText('Nama:', 'Apis')">
+              <span>Nama:</span>
+              <p>NB</p>
+            </div>
+            <div class="info" onclick="changeText('Umur:', '14 tahun')">
+              <span>Umur:</span>
+              <p>14 tahun</p>
+            </div>
+            <div class="info" onclick="changeText('Alamat:', 'Jl. Raya No. 123')">
+                <span>Alamat:</span>
+                <p>Tangsel</p>
+              </div>
+              <div class="info" onclick="changeText('Email:', 'sycledark@gmail.com')">
+                <span>Email:</span>
+                <p>sycledark@.com</p>
+              </div>
+              <div class="info" onclick="changeText('No Hp:', '085813799094')">
+                <span>No Hp:</span>
+                <p>085813799094</p>
+              </div>
+              <div class="info" onclick="changeText('No Hp:', 'Laki-Laki')">
+                <span>Gender:</span>
+                <p>Laki-Laki</p>
+              </div>
+              <div class="info" onclick="changeText('No Hp:', '085723238223')">
+                <span>No Wa:</span>
+                <p>085723238223</p>
+              </div>
+              <div class="info" onclick="changeText('No Hp:', '085723238223')">
+                <span>Ign Mc:</span>
+                <p>Larkxz</p>
+              </div>
+              <div class="infokukukuntul">
+                <p >©Copyright 2023-2024 larkxz</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <footer>Made By Larkxz</footer>
+    
+      <script>
+        function changeText(title, content) {
+          const profileName = document.querySelector('.profile h1');
+          const profileTitle = document.querySelector('.profile p');
+      
+          // Tambahkan kelas fade-out untuk memulai animasi fade out
+          profileName.classList.add('fade-out');
+          profileTitle.classList.add('fade-out');
+      
+          setTimeout(() => {
+            // Setelah animasi fade out selesai, ubah teks dan tambahkan kelas fade-in untuk animasi fade in
+            profileName.textContent = title;
+            profileTitle.textContent = content;
+            profileName.classList.remove('fade-out');
+            profileTitle.classList.remove('fade-out');
+            profileName.classList.add('fade-in');
+            profileTitle.classList.add('fade-in');
+      
+            // Setelah animasi fade in selesai, hapus kelas fade-in
+            setTimeout(() => {
+              profileName.classList.remove('fade-in');
+              profileTitle.classList.remove('fade-in');
+            }, 500); // Sesuaikan durasi animasi dengan animation-duration pada CSS
+          }, 500); // Sesuaikan durasi animasi dengan animation-duration pada CSS
+        }
+        </script>
+        <style>::-webkit-scrollbar {display: none;}</style>
+</body>
+</html>

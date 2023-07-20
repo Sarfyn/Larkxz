@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link type="image/x-icon" rel="shortcut icon" href="https://i.imgur.com/Dg7AqLL.jpg">
   <title>Larkxz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -58,13 +57,16 @@
       font-size: 18px;
       font-weight: bold;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .btn:hover {
-      background-color: rgb(117, 124, 124);
+      transform: scale(1.03);
+      background-color: rgb(71, 54, 75);
       color: white;
       text-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
+      box-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
     }
 
     .btnloser {
@@ -82,22 +84,45 @@
       font-weight: bold;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
     }
 
     .btnloser:hover {
       background-color: rgb(111, 0, 255);
       color: rgb(255, 255, 255);
       text-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
+      box-shadow: 0 4px 8px rgba(43, 43, 43, 0.979);
     }
 
 .footer{
     text-align: center;
     margin-top: 50px;
+    color: rgb(247, 213, 255);
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+    cursor: default;
 }
+
+.lol{
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+  cursor: default;
+}
+
+::selection {
+    shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    background-color: #ffffff5b; /* Warna latar belakang saat teks dipilih */
+    color: #333; /* Warna teks saat teks dipilih */
+  }
+  
+  ::-moz-selection {
+    background-color: #c300ff5b; /* Warna latar belakang saat teks dipilih di Firefox */
+    color: #333; /* Warna teks saat teks dipilih di Firefox */
+  }
   </style>
 </head>
 <body>
-  <img src="elemen/Larkxz.jpg" alt="Profil" class="profile-image" draggable="false">
+  <img src="elemen/larkxz.jpg" alt="Profil" class="profile-image" draggable="false">
   <h1>@Larkxz</h1>
   <div class="project">
     <a href="https://discord.com/invite/VGzxqtBx7Q" class="btn" target="_blank">Kizen Store</a>
@@ -112,7 +137,7 @@
     <br>
     <a href="https://www.shutterstock.com/id/g/Larkxz" class="btn" target="_blank">More About My Design</a>
     <br><br>
-    <a href="https://discord.gg/4dnargdz5G" class="btnloser" target="_blank">Contact me / order </a>
+    <a href="https://discord.gg/4dnargdz5G" class="btnloser" target="_blank">Contact me / order </a><br>
     <script>
         document.addEventListener('contextmenu', function(e) {
           e.preventDefault();
@@ -121,8 +146,8 @@
         function disableRightClick() {
           return false;
         }
-      </script>
-      <footer class="footer">Made By Larkxz</footer>
+      </script>      
+      <footer class="footer"><div class="lol">Gunakan Situs Desktop Untuk Hasi Yang Lebih Baik!</div>Made By Larkxz</footer>
       <style>::-webkit-scrollbar {display: none;}</style></body>
 </body>
 </html>
